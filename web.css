@@ -1,7 +1,4 @@
-div{
-    background-color: aquamarine;
-    color: aquamarine;
-}
+
 h1:hover{
     text-align: center;
     text-decoration: underline;
@@ -11,16 +8,20 @@ h1{
     text-align: center;
 }
 body{
-    background: #3399ff;
+    color: white;
+    margin: 25px 50px;
+    font-family: Montserrat, sans-serif;
+    background: #b0f6a2;
+    text-align: center;
   }
   
   
   .circle{
     position: absolute;
     border-radius: 50%;
-    background: white;
+    background: rgb(0, 0, 0);
     animation: ripple 15s infinite;
-    box-shadow: 0px 0px 1px 0px #508fb9;
+    box-shadow: 0px 0px 1px 0px #000000;
   }
   
   .small{
@@ -77,16 +78,92 @@ body{
     opacity: 0.9;
   }
   
-  @keyframes ripple{
-    0%{
-      transform: scale(0.8);
+ 
+
+    /* Aqui empieza el codigo CSS del boton de fondo animado. */
+    
+    .btn-vert {
+      color: #000000;
+      text-decoration: none;
+      margin: 5px;
+      -webkit-transition: 0.3s all ease;
+      transition: 0.3s ease all;
     }
     
-    50%{
-      transform: scale(1.2);
+    .btn-vert:hover,
+    .btn-vert:focus{
+      color: #000000;
     }
     
-    100%{
-      transform: scale(0.8);
+    .btn-vert {
+      font-size: 18px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: inline-block;
+      text-align: center;
+      width: 270px;
+      font-weight: bold;
+      padding: 14px 0px;
+      border: 3px solid #000000;
+      border-radius: 2px;
+      position: relative;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.1);
     }
-  }
+    
+    .btn-vert:before {
+      -webkit-transition: 0.5s all ease;
+      transition: 0.5s all ease;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      right: 50%;
+      bottom: 0;
+      opacity: 0;
+      content: '';
+      background-color: #ab36ff;
+      z-index: -2;
+    }
+    
+    .btn-vert:hover:before {
+      -webkit-transition: 0.5s all ease;
+      transition: 0.5s all ease;
+      left: 0;
+      right: 0;
+      opacity: 1;
+    }
+    
+    .btn-vert:focus:before {
+      transition: 0.5s all ease;
+      left: 0;
+      right: 0;
+      opacity: 1;
+    }
+    
+    /* Colores */
+    
+    .btn-vert-rojo {
+      color: #000000;
+      border: 3px solid #000000;
+    }
+    
+    .btn-vert-rojo:before {
+      background-color: #fadf49;
+    }
+    
+    .btn-vert-verde {
+      color: #000000;
+      border: 3px solid #000000;
+    }
+    
+    .btn-vert-verde:before {
+      background-color: rgb(56, 83, 255);
+    }
+    
+    .btn-vert-naranja {
+      color: #000000;
+      border: 3px solid #000000;
+    }
+    
+    .btn-vert-naranja:before {
+      background-color: #ff5b5b;
+    }
